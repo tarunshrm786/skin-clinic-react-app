@@ -28,7 +28,7 @@ const InstagramPosts = () => {
           <div className="instagram-card" key={post.id}>
             <iframe
               src={post.src}
-              width="400"
+              width="300"
               height="505"
               frameBorder="0"
               scrolling="no"
