@@ -61,7 +61,7 @@
     margin: 0;
     padding: 0;
     display: flex; /* Horizontal menu */
-    gap: 10px; /* Add gap between menu items */
+    gap: 5px; /* Add gap between menu items */
 }
 
 /* Menu links */
@@ -72,7 +72,7 @@
 .nav-menu ul li a {
     text-decoration: none;
     color: #333;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: bold;
     padding: 10px 20px;
     border-radius: 10px;
