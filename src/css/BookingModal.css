@@ -23,10 +23,10 @@
     max-width: 500px;
     position: relative; /* For positioning close button */
   }
-
+  
   .modal-content h2 {
-    color: black;  
-}
+    color: black;
+  }
   
   .close-button {
     background: none;
@@ -52,21 +52,23 @@
   }
   
   label {
-    margin-bottom: 8px;
+    margin-bottom: 12px; /* Increased space below label for better separation */
     font-weight: bold; /* Bold for better visibility */
     font-size: 18px; /* Larger font size for labels */
+    margin-right: 25px; /* Space to the right of the label */
   }
   
   input[type="text"],
   input[type="email"],
   input[type="date"] {
     padding: 12px; /* Increased padding for inputs */
-    margin-top: 5px; /* Space between label and input */
+    margin-bottom: 20px; /* Added space below input fields */
     border: 1px solid #ccc;
     border-radius: 8px; /* More rounded corners */
     font-size: 16px; /* Font size for inputs */
     color: black;
     transition: border-color 0.3s; /* Smooth transition for focus */
+    margin-left: 20px;
   }
   
   input[type="text"]:focus,
