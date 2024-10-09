@@ -15,7 +15,7 @@
 /* Flexbox to arrange logo, search bar, and menu */
 .header-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     position: relative; /* Allow positioning of absolute elements within */
 }
@@ -52,7 +52,7 @@
 }
 
 .search-bar {
-    margin-left: 30px;
+    margin-left: 20px;
 }
 
 /* Right: Navigation Menu */
