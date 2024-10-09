@@ -1,37 +1,77 @@
 /* Header Styling */
 .header {
-    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
-    border-radius: 15px; /* Rounded corners */
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
     padding: 20px;
     position: absolute;
-    top: 50px; /* Distance from top */
+    top: 50px;
     left: 50%;
-    transform: translateX(-50%); /* Center the header horizontally */
-    z-index: 2; /* Ensure it appears above the video */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for a lifted effect */
-    text-align: center;
-    width: 80%; /* Adjust width as per your design */
+    transform: translateX(-50%);
+    z-index: 2;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 80%;
 }
 
-/* Navigation Menu Styling */
+/* Flexbox to arrange logo, search bar, and menu */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Left: Logo */
+.logo img {
+    width: 100px;
+}
+
+/* Middle: Search Bar */
+.search-bar {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    max-width: 400px;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    padding-right: 40px;
+}
+
+.search-btn {
+    position: absolute;
+    right: 10px;
+    background: none;
+    border: none;
+    color: #333;
+    cursor: pointer;
+}
+
+.search-bar {
+    margin-left: 30px;
+}
+
+
+/* Right: Navigation Menu */
 .nav-menu ul {
     list-style: none;
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: space-around; /* Distribute the menu items evenly */
+    display: flex; /* Horizontal menu */
+    gap: 2px; /* Add gap between menu items */
 }
 
-/* Navigation Menu Item Styling */
+/* Menu links */
 .nav-menu ul li {
-    position: relative; /* Required for absolute positioning of dropdown */
-    display: inline-block;
+    position: relative;
 }
 
-/* Menu Link Styling */
 .nav-menu ul li a {
     text-decoration: none;
-    color: #333; /* Menu text color */
+    color: #333;
     font-size: 18px;
     font-weight: bold;
     padding: 10px 20px;
@@ -39,40 +79,50 @@
     transition: background-color 0.3s ease;
 }
 
-/* Hover Effect for Menu Links */
 .nav-menu ul li a:hover {
-    background-color: #ff6347; /* Change color on hover (Tomato color) */
+    background-color: #ff6347;
     color: white;
 }
 
-/* Dropdown Menu Styles */
+/* Dropdown Menu Styling */
 .dropdown-menu {
     display: none; /* Hide dropdown initially */
-    position: absolute; /* Position dropdown absolutely */
-    top: 100%; /* Position below the dropdown link */
-    left: 0; /* Align to the left */
-    background-color: white; /* Background color for dropdown */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow for dropdown */
-    z-index: 1000; /* Ensure dropdown is above other elements */
-    padding: 10px 0; /* Padding for dropdown menu */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 10px 0;
+    z-index: 1000;
+    width: max-content;
+    flex-direction: column; /* Ensure vertical stacking of dropdown items */
+    visibility: hidden; /* Initially hide dropdown */
+    opacity: 0; /* Make invisible */
+    transition: opacity 0.3s ease, visibility 0.3s ease; /* Smooth visibility */
 }
 
-/* Show dropdown on hover */
-.nav-menu ul li:hover .dropdown-menu {
-    display: block; /* Show dropdown when hovering over parent li */
+/* Ensure dropdown items are displayed vertically */
+.dropdown-menu ul {
+    display: block; /* Ensure block display for vertical alignment */
 }
 
 /* Dropdown Item Styles */
 .dropdown-menu li {
-    padding: 10px 15px; /* Padding for dropdown items */
+    padding: 10px 15px;
 }
 
 /* Link Styles for Dropdown Items */
 .dropdown-menu li a {
-    color: black; /* Text color for dropdown items */
+    color: black;
 }
 
-/* Optional hover effect for dropdown items */
 .dropdown-menu li a:hover {
-    background-color: #f2f2f2; /* Change background on hover */
+    background-color: #f2f2f2;
+}
+
+/* Show dropdown on hover */
+.nav-menu ul li:hover .dropdown-menu {
+    display: block; /* Show dropdown only on hover */
+    visibility: visible; /* Make visible */
+    opacity: 1; /* Fade in */
 }
