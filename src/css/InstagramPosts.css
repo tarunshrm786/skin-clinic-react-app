@@ -1,0 +1,35 @@
+/* InstagramPosts.css */
+
+.instagram-posts-section {
+    padding: 50px 20px; /* Padding for the section */
+    text-align: center; /* Center the text */
+  }
+  
+  .instagram-posts-section h2 {
+    font-size: 2rem; /* Font size for the section title */
+    margin-bottom: 30px; /* Space below title */
+    color: #333; /* Dark color for text */
+  }
+  
+  .instagram-posts-container {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center the posts */
+    gap: 30px; /* Space between the cards */
+  }
+  
+  .instagram-card {
+    background-color: #fff; /* White background for cards */
+    border-radius: 10px; /* Rounded corners for cards */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    overflow: hidden; /* Ensure contents don't overflow */
+    width: 400px; /* Width for cards */
+    text-align: center; /* Center text */
+    padding: 10px; /* Padding inside cards */
+  }
+  
+  .instagram-card p {
+    margin-top: 10px; /* Space above caption */
+    font-size: 1rem; /* Font size for caption */
+    color: #555; /* Color for caption text */
+  }
+  

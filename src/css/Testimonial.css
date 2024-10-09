@@ -1,0 +1,59 @@
+/* Testimonial.css */
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+/* Section Styling */
+.testimonial-section {
+    background: linear-gradient(to right, #f9f9f9, #ffffff); /* Gradient background */
+    padding: 50px 20px; /* Padding for top/bottom and sides */
+    text-align: center; /* Center the text */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    margin: 10px;
+  }
+  
+  /* Heading Styling */
+  .testimonial-section h2 {
+    font-size: 2.5rem; /* Large font size */
+    margin-bottom: 20px; /* Space below heading */
+    color: #333; /* Dark color for text */
+  }
+  
+  /* Individual Testimonial Slide Styling */
+  .testimonial-slide {
+    padding: 20px; /* Space inside each slide */
+  }
+  
+  .testimonial-slide p {
+    font-size: 1.2rem; /* Font size for testimonial text */
+    color: #555; /* Gray color for text */
+    margin: 10px 0; /* Margin for spacing */
+    line-height: 1.6; /* Increase line height for readability */
+  }
+  
+  .testimonial-slide h4 {
+    font-size: 1.5rem; /* Font size for name */
+    color: #000; /* Black color for name */
+    margin-top: 10px; /* Space above name */
+  }
+  
+  .position {
+    font-size: 1rem; /* Font size for position */
+    color: #777; /* Light gray for position */
+    margin-top: 5px; /* Space above position */
+  }
+  
+  /* Slick Slider Dots Styling */
+  .slick-dots {
+    bottom: -30px; /* Position the dots */
+  }
+  
+  .slick-dots li button:before {
+    font-size: 10px; /* Size for the dot */
+    color: #333; /* Color for the dot */
+  }
+  
+  .slick-dots li.slick-active button:before {
+    color: #ff6347; /* Active dot color (Tomato color) */
+  }
+  

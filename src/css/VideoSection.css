@@ -1,0 +1,60 @@
+.video-section {
+    position: relative;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+  }
+  
+  /* Background Video Styling */
+  .background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Puts the video behind the content */
+  }
+  
+  /* Content Styling */
+  .content {
+    position: relative;
+    z-index: 1;
+  }
+  
+  h1 {
+    font-size: 48px;
+    font-weight: bold;
+  }
+  
+  p {
+    font-size: 24px;
+  }
+  
+  /* Button Group Styling */
+  .button-group {
+    margin-top: 20px; /* Add space between text and buttons */
+  }
+  
+  .btn {
+    background-color: white; /* White background */
+    color: black; /* Black text */
+    border-radius: 25px; /* Rounded corners */
+    padding: 15px 25px; /* Padding inside the button */
+    font-size: 16px;
+    font-weight: bold;
+    border: none; /* No border */
+    cursor: pointer;
+    margin: 0 10px; /* Space between the buttons */
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #ff6347; /* Change background on hover (Tomato color) */
+    color: white; /* Change text color on hover */
+  }
+  
