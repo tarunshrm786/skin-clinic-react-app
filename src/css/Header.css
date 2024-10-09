@@ -61,7 +61,7 @@
     margin: 0;
     padding: 0;
     display: flex; /* Horizontal menu */
-    gap: 5px; /* Add gap between menu items */
+    gap: 0px; /* Add gap between menu items */
 }
 
 /* Menu links */
@@ -74,7 +74,7 @@
     color: #333;
     font-size: 16px;
     font-weight: bold;
-    padding: 10px 20px;
+    padding: 5px 10px;
     border-radius: 10px;
     transition: background-color 0.3s ease;
 }
@@ -164,7 +164,7 @@
     .nav-menu {
         display: none; /* Hide menu by default on mobile */
         flex-direction: column; /* Stack menu items vertically */
-        width: 100%; /* Full width */
+        width: 80%; /* Full width */
     }
 
     .nav-menu.active {
@@ -181,6 +181,6 @@
 
     .nav-menu ul {
         flex-direction: column; /* Stack menu items vertically */
-        gap: 5px; /* Smaller gap between items */
+        gap: 0px; /* Smaller gap between items */
     }
 }
