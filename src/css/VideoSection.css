@@ -1,60 +1,119 @@
 .video-section {
-    position: relative;
-    height: 720px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    text-align: center;
-    overflow: hidden;
+  position: relative;
+  height: 720px; /* Default height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Background Video Styling */
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Cover the entire section */
+  z-index: -1; /* Puts the video behind the content */
+}
+
+/* Content Styling */
+.content {
+  position: relative;
+  z-index: 1;
+}
+
+h1 {
+  font-size: 48px; /* Default heading size */
+  font-weight: bold;
+}
+
+p {
+  font-size: 24px; /* Default paragraph size */
+}
+
+/* Button Group Styling */
+.button-group {
+  margin-top: 20px; /* Space between text and buttons */
+}
+
+.btn {
+  background-color: white; /* White background */
+  color: black; /* Black text */
+  border-radius: 25px; /* Rounded corners */
+  padding: 15px 25px; /* Padding inside the button */
+  font-size: 16px; /* Default button font size */
+  font-weight: bold;
+  border: none; /* No border */
+  cursor: pointer;
+  margin: 0 10px; /* Space between the buttons */
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #ff6347; /* Change background on hover (Tomato color) */
+  color: white; /* Change text color on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .video-section {
+      height: 600px; /* Adjust height for medium screens */
   }
-  
-  /* Background Video Styling */
-  .background-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1; /* Puts the video behind the content */
-  }
-  
-  /* Content Styling */
-  .content {
-    position: relative;
-    z-index: 1;
-  }
-  
+
   h1 {
-    font-size: 48px;
-    font-weight: bold;
+      font-size: 36px; /* Smaller heading size */
   }
-  
+
   p {
-    font-size: 24px;
+      font-size: 20px; /* Smaller paragraph size */
   }
-  
-  /* Button Group Styling */
-  .button-group {
-    margin-top: 20px; /* Add space between text and buttons */
-  }
-  
+
   .btn {
-    background-color: white; /* White background */
-    color: black; /* Black text */
-    border-radius: 25px; /* Rounded corners */
-    padding: 15px 25px; /* Padding inside the button */
-    font-size: 16px;
-    font-weight: bold;
-    border: none; /* No border */
-    cursor: pointer;
-    margin: 0 10px; /* Space between the buttons */
-    transition: background-color 0.3s ease;
+      padding: 12px 20px; /* Adjust padding for buttons */
+      font-size: 14px; /* Smaller button font size */
   }
-  
-  .btn:hover {
-    background-color: #ff6347; /* Change background on hover (Tomato color) */
-    color: white; /* Change text color on hover */
+}
+
+@media (max-width: 768px) {
+  .video-section {
+      height: 450px; /* Adjust height for small screens */
   }
-  
+
+  h1 {
+      font-size: 28px; /* Further reduce heading size */
+  }
+
+  p {
+      font-size: 18px; /* Further reduce paragraph size */
+  }
+
+  .btn {
+      padding: 10px 15px; /* Further adjust padding for buttons */
+      font-size: 12px; /* Further reduce button font size */
+      margin: 0 5px; /* Adjust margin between buttons */
+  }
+}
+
+@media (max-width: 480px) {
+  .video-section {
+      height: 500px; /* Adjust height for very small screens */
+  }
+
+  h1 {
+      font-size: 24px; /* Further reduce heading size */
+  }
+
+  p {
+      font-size: 16px; /* Further reduce paragraph size */
+  }
+
+  .btn {
+      padding: 8px 12px; /* Further adjust padding for buttons */
+      font-size: 10px; /* Further reduce button font size */
+      margin: 0 3px; /* Adjust margin between buttons */
+  }
+}

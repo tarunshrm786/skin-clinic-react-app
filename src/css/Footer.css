@@ -12,6 +12,7 @@
     width: 80%; /* Adjust width as per your design */
     display: flex;
     justify-content: space-between; /* Space out the columns */
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
 }
 
 /* Footer Column */
@@ -19,6 +20,7 @@
     flex: 1; /* Flex to occupy equal space */
     margin: 0 20px; /* Margin between columns */
     min-width: 250px; /* Minimum width for responsive design */
+    max-width: 300px; /* Limit the width of columns */
 }
 
 /* Footer Heading */
@@ -101,4 +103,44 @@
 
 .social-icons a:hover {
     color: #ff6347; /* Change color on hover (Tomato color) */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column; /* Stack columns vertically on smaller screens */
+        align-items: center; /* Center align columns */
+    }
+
+    .footer-column {
+        margin: 10px 0; /* Vertical margin between stacked columns */
+        width: 100%; /* Full width for each column */
+        max-width: none; /* Remove max width for small screens */
+    }
+
+    .footer-column h3 {
+        font-size: 18px; /* Slightly smaller heading font size */
+    }
+
+    .footer-column p {
+        font-size: 14px; /* Smaller paragraph font size */
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        padding: 30px 10px; /* Reduced padding for very small screens */
+    }
+
+    .footer-column h3 {
+        font-size: 16px; /* Further reduce heading font size */
+    }
+
+    .footer-column p {
+        font-size: 12px; /* Further reduce paragraph font size */
+    }
+
+    .social-icons a {
+        font-size: 20px; /* Smaller icon size */
+    }
 }

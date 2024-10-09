@@ -17,11 +17,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative; /* Allow positioning of absolute elements within */
 }
 
 /* Left: Logo */
 .logo img {
-    width: 100px;
+    width: 100px; /* Default logo size */
 }
 
 /* Middle: Search Bar */
@@ -30,7 +31,7 @@
     display: flex;
     justify-content: center;
     position: relative;
-    max-width: 400px;
+    max-width: 400px; /* Max width for larger screens */
 }
 
 .search-bar input {
@@ -54,14 +55,13 @@
     margin-left: 30px;
 }
 
-
 /* Right: Navigation Menu */
 .nav-menu ul {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex; /* Horizontal menu */
-    gap: 2px; /* Add gap between menu items */
+    gap: 10px; /* Add gap between menu items */
 }
 
 /* Menu links */
@@ -125,4 +125,62 @@
     display: block; /* Show dropdown only on hover */
     visibility: visible; /* Make visible */
     opacity: 1; /* Fade in */
+}
+
+/* Hamburger Menu Styling */
+.hamburger {
+    display: none; /* Hide by default */
+    flex-direction: column;
+    cursor: pointer;
+    position: absolute; /* Positioning it relative to header */
+    right: 20px; /* 20px from the right */
+    top: 20px; /* 20px from the top */
+}
+
+.hamburger div {
+    height: 3px;
+    width: 25px;
+    background: #333;
+    margin: 4px 0;
+    transition: 0.3s;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .logo img {
+        width: 80px; /* Smaller logo for mobile */
+    }
+
+    .search-bar {
+        margin-left: 0; /* Remove left margin on mobile */
+        max-width: 100%; /* Full width on small screens */
+    }
+
+    .nav-menu {
+        display: none; /* Hide menu by default on mobile */
+        flex-direction: column; /* Stack menu items vertically */
+        width: 100%; /* Full width */
+    }
+
+    .nav-menu.active {
+        display: flex; /* Show menu when active */
+    }
+
+    .hamburger {
+        display: flex; /* Show hamburger icon on small screens */
+        margin-top: 10px; /* Space above hamburger */
+        position: absolute; /* Keep it positioned at the top right */
+        right: 20px; /* Ensure it's at the right side */
+        top: 20px; /* Adjust according to header padding */
+    }
+
+    .nav-menu ul {
+        flex-direction: column; /* Stack menu items vertically */
+        gap: 5px; /* Smaller gap between items */
+    }
 }
