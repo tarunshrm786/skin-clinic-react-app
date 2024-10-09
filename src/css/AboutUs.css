@@ -35,10 +35,13 @@
     text-align: center; /* Center text */
 }
 
+
 .about-text h1 {
     font-size: 2rem; /* Font size for the heading */
     margin-bottom: 10px; /* Space below heading */
     color: #333; /* Dark color for heading */
+    text-decoration: underline; /* Underline text */
+    text-decoration-color: orange; /* Set underline color to orange */
 }
 
 .about-text h2 {

@@ -109,8 +109,8 @@ const VideoSection = () => {
 
       {/* Content Section */}
       <div className="content">
-        <h1>Welcome to the Skin Clinic</h1>
-        <p>Discover the best treatments for your skin</p>
+        <h1>Welcome to the Skin & You Clinic</h1>
+        <p>Instantly Smooth Away Wrinkles and Scars for a Fresh, Youthful Glow</p>
 
         {/* Call to Action Buttons */}
         <div className="button-group">
