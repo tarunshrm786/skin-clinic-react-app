@@ -353,7 +353,7 @@ const BookingModal = ({ open, handleClose }) => {
         setLoadingTimes(true);
         try {
           // Fetch available time slots from the API
-          const response = await axios.get(`https://skin-clinic-api-nodejs.vercel.app/api/bookings/available-time-slots`, {
+          const response = await axios.get(`http://localhost:5000/api/bookings/available-time-slots`, {
             params: { date },
           });
           setAvailableTimes(response.data.availableTimeSlots); // Access availableTimeSlots
@@ -383,7 +383,7 @@ const BookingModal = ({ open, handleClose }) => {
     setLoading(true);
 
     try {
-      const response = await axios.post('https://skin-clinic-api-nodejs.vercel.app/api/bookings', {
+      const response = await axios.post('http://localhost:5000/api/bookings', {
         fullName,
         email,
         date,
@@ -460,7 +460,7 @@ const BookingModal = ({ open, handleClose }) => {
             }}
             required
           />
-          {date && ( // Show time dropdown only if date is selected
+          {/* {date && ( // Show time dropdown only if date is selected
             <TextField
               label="Time"
               variant="outlined"
@@ -484,7 +484,37 @@ const BookingModal = ({ open, handleClose }) => {
                 ))
               )}
             </TextField>
-          )}
+          )} */}
+          {date && ( // Show time dropdown only if date is selected
+  <TextField
+    label="Time"
+    variant="outlined"
+    fullWidth
+    margin="normal"
+    select
+    value={time}
+    onChange={(e) => setTime(e.target.value)}
+    required
+    disabled={loadingTimes} // Disable if loading times
+  >
+    {loadingTimes ? (
+      <MenuItem disabled>
+        <CircularProgress size={24} />
+      </MenuItem>
+    ) : availableTimes.length > 0 ? (
+      availableTimes.map((option) => (
+        <MenuItem key={option} value={option}>
+          {option}
+        </MenuItem>
+      ))
+    ) : (
+      <MenuItem disabled>
+        No time slots available at this date
+      </MenuItem>
+    )}
+  </TextField>
+)}
+
           <TextField
             label="Message"
             variant="outlined"
